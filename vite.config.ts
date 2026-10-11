@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
+      includeAssets: ['favicon.svg'],
       workbox: {
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         globIgnores: ['clang/**'],
@@ -21,14 +21,9 @@ export default defineConfig({
         display: 'standalone', // Sorgt dafür, dass sie sich wie eine App öffnet
         icons: [
           {
-            src: '/icon-192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png'
+            src: '/favicon.svg',
+            sizes: 'any',
+            type: 'image/svg+xml'
           }
         ]
       }
