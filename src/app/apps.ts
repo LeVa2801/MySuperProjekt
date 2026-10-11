@@ -39,6 +39,11 @@ export const apps: AppDefinition[] = [
     tag: "BEREIT", icon: "⌘", Component: lazy(() => import("../features/api-generator/ApiGeneratorPage")),
   },
   {
+    path: "/video-compressor", navLabel: "Video-Kompressor", cardTitle: "MP4 Video-Kompressor",
+    description: "Komprimiere eigene Videos lokal zu MP4 und behalte Auflösung und Textschärfe unter Kontrolle.",
+    tag: "LOKAL", icon: "▶", Component: lazy(() => import("../features/video-compressor/VideoCompressorPage")),
+  },
+  {
     path: "/colorpicker", navLabel: "Colorpicker", cardTitle: "Colorpicker",
     description: "Wähle Farben, kopiere Hex-Werte und verwalte deine Palette.",
     tag: "BEREIT", icon: "◉", Component: lazy(() => import("../features/colorpicker/ColorpickerPage")),

@@ -10,7 +10,7 @@ export default defineConfig({
       includeAssets: ['favicon.svg'],
       workbox: {
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
-        globIgnores: ['clang/**'],
+        globIgnores: ['clang/**', '**/ffmpeg-core-*.wasm'],
       },
       manifest: {
         name: 'Meta Dev Dashboard',

@@ -9,7 +9,10 @@ Ein browserbasiertes Entwickler-Dashboard zum Lernen und Experimentieren. Es ver
 - **3D Modellstudio:** Modelle aus Grundkörpern erstellen und als GLB exportieren.
 - **Animation Studio:** 3D-Animationen mit Keyframes erstellen und in mehrere Sprachen exportieren.
 - **API-Generator:** Fetch- und cURL-Beispiele für REST-Endpunkte erzeugen.
+- **MP4 Video-Kompressor:** Eigene oder autorisierte Videodateien lokal im Browser nach H.264/MP4 komprimieren.
 - **Colorpicker, Todo und Einstellungen:** Farben und Aufgaben verwalten sowie das Dashboard anpassen.
+
+Der Video-Kompressor lädt FFmpeg WebAssembly beim ersten Start der Funktion (rund 30 MB) und verarbeitet Videos lokal im Browser; Dateien werden nicht hochgeladen. Die Quellauflösung bleibt standardmäßig erhalten, während sich die Qualität über CRF und die maximale Auflösung anpassen lässt. Video und komprimierter Export benötigen entsprechend Arbeitsspeicher.
 
 ## Voraussetzungen
 
@@ -74,3 +77,7 @@ Danach ist die Anwendung unter `http://localhost:8080` erreichbar. Das Docker-Im
 - `dist/` – generierte Build-Ausgabe (wird nicht eingecheckt)
 
 Die Anwendung ist eine clientseitige Single-Page-App mit React, TypeScript und Vite. Die Entwicklungstools liegen bewusst gemeinsam im Repository-Root, sodass Installation, Checks und Build immer von derselben Stelle aus funktionieren.
+
+## Lizenz
+
+Das Dashboard und der Video-Kompressor stehen unter GPL-2.0-or-later. Der Kompressor verwendet FFmpeg WebAssembly; beachte die jeweiligen Drittanbieter-Lizenzen beim Weiterverteilen.

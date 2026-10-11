@@ -16,7 +16,7 @@ export default function DashboardPage() {
         <div className="date-chip"><span className="live-dot" /> Alle Apps lokal verfügbar</div>
       </div>
       <div className="summary-row">
-        <div className="summary-card"><span className="summary-icon">▦</span><div><strong>8</strong><span>Apps verfügbar</span></div></div>
+        <div className="summary-card"><span className="summary-icon">▦</span><div><strong>{apps.length}</strong><span>Apps verfügbar</span></div></div>
         <div className="summary-card"><span className="summary-icon">✓</span><div><strong>{openTodos}</strong><span>Offene Aufgaben</span></div></div>
         <div className="summary-card"><span className="summary-icon">◉</span><div><strong>Browser</strong><span>Lokale Speicherung</span></div></div>
       </div>
